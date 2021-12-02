@@ -39,6 +39,9 @@
 }
 
 /*gen*/
+html {
+	scroll-behavior: smooth;
+}
 body {
 	background: var(--clr-dark);
 	color: var(--clr-light);
@@ -108,10 +111,9 @@ h5 {
 .btn {
 	display: inline-block;
 	padding: 0.5em 2.5em;
-	background-color: #63c5da;
+	background-color: var(--clr-accent);
 	color: var(--clr-light);
 	text-decoration: none;
-	border: 0.005 solid;
 	cursor: pointer;
 	font-size: 0.8rem;
 	text-transform: uppercase;
@@ -143,14 +145,13 @@ nav {
 }
 .nav {
 	position: fixed;
-	background: var(--clr-second);
+	background: #525252e1;
 	color: var(--clr-light);
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
-
 	transform: translateX(100%);
 	transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -169,17 +170,48 @@ nav {
 	font-weight: var(--fw-bold);
 	text-decoration: none;
 }
+
 .nav__link:hover {
 	transform: scale(1.1);
+	color: #f9004d;
+	transition: 0.4s;
 }
+.nav-toggle {
+	padding: 0.5em;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	z-index: 1000;
+}
+.nav-open .nav {
+	transform: translateX(0);
+}
+.nav-open .nav-toggle {
+	position: fixed;
+}
+.nav-open .hamburger {
+	transform: rotate(0.625turn);
+}
+.nav-open .hamburger::before {
+	transform: rotate(90deg) translateX(-8px);
+}
+.nav-open .hamburger::after {
+	opacity: 0;
+}
+
 .hamburger {
 	display: block;
-	position: relative;
+
+	position: sticky;
 }
-.hamburger .hamburger::before,
+.hamburger,
+.hamburger::before,
 .hamburger::after {
-	background: var(--clr-dark);
-	width: 2em;
+	background: var(--clr-light);
+	width: 3em;
 	height: 3px;
 	border-radius: 1em;
 	transition: transform 250ms ease-in-out;
@@ -191,26 +223,13 @@ nav {
 	left: 0;
 	right: 0;
 }
-/*nav ul li {
-	position: sticky;
-	list-style-type: none;
-	display: inline-block;
-	padding: 0.4em;
+.hamburger::before {
+	top: 8px;
 }
-nav ul li:hover {
-	transform: scale(1.1);
+.hamburger::after {
+	bottom: 8px;
 }
 
-nav ul li a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: capitalize;
-}
-nav ul li a:hover {
-	color: #f9004d;
-	transition: 0.4s;
-}*/
 /*Intro*/
 
 .hero {
@@ -339,16 +358,19 @@ nav ul li a:hover {
 	text-align: center;
 }
 
-.skills {
-	max-width: 1000px;
-	margin: 0 auto;
+.section__title--Skills {
+	color: var(--clr-accent-letter);
+	font-weight: var(--fw-bold);
+	text-align: center;
 }
 .skills ul li {
 	text-align: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	.skills {
 		display: box;
+		max-width: 1000px;
+		margin: 0 auto;
 	}
 }
 
@@ -359,6 +381,10 @@ nav ul li a:hover {
 	text-align: center;
 }
 .contact-me i {
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
 	color: #f9004d;
 }
 /*footer*/
@@ -366,8 +392,14 @@ nav ul li a:hover {
 	background: var(--clr-second);
 	color: var(--clr-light);
 	text-align: center;
-	padding: 2.4em 0;
+	padding: 1em 0;
 }
 .footer a {
 	color: #f9004d;
+}
+.footer i {
+	display: block;
+	text-align: center;
+
+	font-size: 30px;
 }
