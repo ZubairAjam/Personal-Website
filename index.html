@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Portfolio website</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/style2.css" />
 
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
@@ -20,36 +22,37 @@
 	</head>
 	<body>
 		<!----hero Section---->
-
-		<div class="hero">
-			<nav>
-				<h2 class="logo">My<span>Website</span></h2>
-				<ul>
-					<li><a href="#content">Home</a></li>
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#service">Services</a></li>
-
-					<li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact-me">Contact Me</a></li>
-                    <li><a href="img/Zubair Ajam CV-Tech.pdf" download>Download My CV</a></li>
+		<header>
+			<h2 class="logo">My<span>Website</span></h2>
+			
+				<button class = "nav-toggle" aria-label="toggle navigation">
+					<span class="hamburger"></span>
+				</button>
+				<nav class = "nav">
+				<ul class="nav_list">
+					<li class="nav__item"><a href="#hero" class="nav__link">Home</a></li>
+					<li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+					<li class="nav__item"><a href="#service" class="nav__link">Services</a></li>
+					<li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#contact-me" class="nav__link">Contact Me</a></li>
+                    <li class="nav__item"><a href="img/Zubair Ajam CV-Tech.pdf" class="nav__link" download>Download My CV</a></li>
 				</ul>
 			</nav>
-
-			<div class="content" id="content">
-				<img src="img/cc8bcf8c-23eb-471d-8874-b99c42d93ea3 3.jpg" />
-				<h4>Hello, my name is</h4>
-				<h1>Zubair <span>Ajam</span></h1>
-				<h3>I am a Web Developer.</h3>
-			</div>
-		</div>
+		</header>
+		<section class="hero" id="hero">
+				<h1 class="section__title section__title--intro">Hello, my name is<strong>Zubair <span>Ajam</span></strong></h1>
+				<img src="img/cc8bcf8c-23eb-471d-8874-b99c42d93ea3 3.jpg" class= "hero__img" />
+				<p class="section__subtitle section__subtitle--intro">I am a Web Developer</p>
+				
+			
+		
+	</section>
 
 		<!----About section---->
 		<section class="about" id="about">
-			<div class="main">
-				<img src="img/ED2F01E4-A196-4484-BE8D-EB0E8A596961.JPG" />
+			<h2 class="section__title section__title--About-me">About Me</h2>
+					<h3 class="section__subtitle section__subtitle--About-me">Developer <span>& Designer</span></h3>
 				<div class="about-text">
-					<h2>About Me</h2>
-					<h5>Developer <span>& Designer</span></h5>
 					<p>
 						I am a front-end web developer. Having started my adulthood in music
 						(musician and sound engineer) and a background in photography too, I
@@ -57,22 +60,21 @@
 						And that is web-design. I can bring your visions to life with
 						creative and responsive websites. Feel free to contact me for a free consultation.
 					</p>
-                    <a href="#contact-me" type="button">Get in touch</a>
-                    <a href="img/Zubair Ajam CV-Tech.pdf" type="button">Download My CV</a>
+                    <a  href="#contact-me" class = "btn" type="button">Get in touch</a>
+                    <a  href="img/Zubair Ajam CV-Tech.pdf" class = "btn" type="button">Download My CV</a>
 				</div>
-			</div>
+				<img src="img/ED2F01E4-A196-4484-BE8D-EB0E8A596961.JPG" class="about__img" />
 		</section>
 
 		<!-----Service section----------->
-		<div class="service" id="service">
-			<div class="title">
-				<h2>Our Services</h2>
-			</div>
+		<section class="my-services" id="service">
+			
+				<h2 class="section__title section__title--Services">Services</h2>
+			<div class="services">
 
-			<div class="box">
 				<div class="card">
 					<i class="fas fa-bars"></i>
-					<h5>Web Development</h5>
+					<h3>Web Development</h3>
 					<div class="pra">
 						<p>I can design your website and bring your visions to life.</p>
 
@@ -82,7 +84,7 @@
 
 				<div class="card">
 					<i class="fas fa-shopping-basket"></i>
-					<h5>Online Shopping</h5>
+					<h3>Online Shopping</h3>
 					<div class="pra">
 						<p>
 							Thinking about expanding your business? Do you want to create your
@@ -95,7 +97,7 @@
 
 				<div class="card">
 					<i class="far fa-bell"></i>
-					<h5>Website Management</h5>
+					<h3>Website Management</h3>
 					<div class="pra">
 						<p>
 							I will ensure that your website is always up to date and working
@@ -106,14 +108,13 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!--Skills section-->
 		<section class="skills" id="skills">
 			<div class="main">
-				<img src="img/1*kGPF42Ioy9m2XpjO4-q_7A.jpeg" />
 				<div class="skills-text">
-					<h2>My <span>Stack</span></h2>
+					<h2 class="section__title section__title--Skills">My <span>Stack</span></h2>
 					<p>
                         I am a front-end web developer. My tech stack consists of:
                         <ul>
@@ -126,30 +127,31 @@
                             <li>I also do UIPath design and architecture</li>
                         </ul>
 					</p>
-					<a href="#contact-me" type="button">Get in touch</a>
+					<a href="#contact-me" class = "btn" type="button">Get in touch</a>
 				</div>
 			</div>
 		</section>
 
 		<!------Contact Me section------>
-		<div class="contact-me" id="contact-me">
+		<section class="contact-me" id="contact-me">
+			<h3 class = "section__title section__title--Contact">Get In Touch</h3>
 			<i class="fas fa-phone"></i>
-			<p>+27 79 5011 069</p>
+			<a class = "btn">+27 79 5011 069 </a>
 			<i class="far fa-envelope"></i>
-			<p>zubairajam@gmail.com</p>
-		</div>
+			<a href="mailto:zubairajam@gmail.com" class = "btn">zubairajam@gmail.com</a>
+		</section>
 
 		<!------footer--------->
-		<footer>
+		<section class="footer">
 			<p>Zubair Ajam</p>
 			<div class="social">
 				<a href="https://www.facebook.com/zubair.ajam"
-					><i class="fab fa-facebook-f"></i
+					class = "btn"><i class="fab fa-facebook-f"></i
 				></a>
 				<a href="https://www.instagram.com/zubair_ajam/"
-					><i class="fab fa-instagram"></i
+					class= "btn"><i class="fab fa-instagram"></i
 				></a>
 			</div>
-		</footer>
+		</section>
 	</body>
 </html>
