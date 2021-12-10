@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio website</title>
 		<link rel="stylesheet" type="text/css" href="css/style2.css" />
 
@@ -18,60 +18,82 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		
 	</head>
 	<body>
-		<!----hero Section---->
-		<header class= "header">
+		<!--hero Section-->
+		<header class="header">
 			<h2 class="logo">My<span>Website</span></h2>
-			
-				<button class = "nav-toggle" aria-label="toggle navigation">
-					<span class="hamburger"></span>
-				</button>
-				<nav class = "nav">
+
+			<button class="nav-toggle" aria-label="toggle navigation">
+				<span class="hamburger"></span>
+			</button>
+			<nav class="nav">
 				<ul class="nav_list">
 					<li class="nav__item"><a href="#hero" class="nav__link">Home</a></li>
-					<li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-					<li class="nav__item"><a href="#service" class="nav__link">Services</a></li>
-					<li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#contact-me" class="nav__link">Contact Me</a></li>
-                    <li class="nav__item"><a href="img/Zubair Ajam CV-Tech.pdf" class="nav__link" download>Download My CV</a></li>
+					<li class="nav__item">
+						<a href="#about" class="nav__link">About Me</a>
+					</li>
+					<li class="nav__item">
+						<a href="#service" class="nav__link">Services</a>
+					</li>
+					<li class="nav__item">
+						<a href="#skills" class="nav__link">Skills</a>
+					</li>
+					<li class="nav__item">
+						<a href="#contact-me" class="nav__link">Contact Me</a>
+					</li>
+					<li class="nav__item">
+						<a href="img/Zubair%20Ajam%20CV-Tech.pdf" class="nav__link" download
+							>Download My CV</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
 		<section class="hero" id="hero">
-				<h1 class="section__title section__title--intro">Hello, my name is<strong>Zubair <span>Ajam</span></strong></h1>
-				<img src="img/cc8bcf8c-23eb-471d-8874-b99c42d93ea3 3.jpg" class= "hero__img" alt = "Photo of Zubair"/>
-				<p class="section__subtitle section__subtitle--intro">I am a Web Developer</p>
-				
-			
-		
-	</section>
-
-		<!----About section---->
-		<section class="about" id="about">
-			<h2 class="section__title section__title--About-me">About Me</h2>
-					<h3 class="section__subtitle section__subtitle--About-me">Developer <span>& Designer</span></h3>
-				<div class="about-text">
-					<p>
-						I am a front-end web developer. Having started my adulthood in music
-						(musician and sound engineer) and a background in photography too, I
-						decided to change paths and get into something I thoroughly enjoy.
-						And that is web-design. I can bring your visions to life with
-						creative and responsive websites. Feel free to contact me for a free consultation.
-					</p>
-                    <a  href="#contact-me" class = "btn" type="button">Get in touch</a>
-                    <a  href="img/Zubair Ajam CV-Tech.pdf" class = "btn" type="button">Download My CV</a>
-				</div>
-				<img src="img/ED2F01E4-A196-4484-BE8D-EB0E8A596961.JPG" class="about__img" alt="Another photo of Zubair"/>
+			<h1 class="section__title section__title--intro">
+				Hello, my name is<strong>Zubair <span>Ajam</span></strong>
+			</h1>
+			<img
+				src="img/cc8bcf8c-23eb-471d-8874-b99c42d93ea3%203.jpg"
+				class="hero__img"
+				alt="Photo of Zubair"
+			/>
+			<p class="section__subtitle section__subtitle--intro">
+				I am a Web Developer
+			</p>
 		</section>
 
-		<!-----Service section----------->
-		<section class="my-services" id="service">
-			
-				<h2 class="section__title section__title--Services">Services</h2>
-			<div class="services">
+		<!--About section-->
+		<section class="about" id="about">
+			<h2 class="section__title section__title--About-me">About Me</h2>
+			<h3 class="section__subtitle section__subtitle--About-me">
+				Developer <span>& Designer</span>
+			</h3>
+			<div class="about-text">
+				<p>
+					I am a front-end web developer. Having started my adulthood in music
+					(musician and sound engineer) and a background in photography too, I
+					decided to change paths and get into something I thoroughly enjoy. And
+					that is web-design. I can bring your visions to life with creative and
+					responsive websites. Feel free to contact me for a free consultation.
+				</p>
+				<a href="#contact-me" class="btn">Get in touch</a>
+				<a href="img/Zubair%20Ajam%20CV-Tech.pdf" class="btn" download
+					>Download My CV</a
+				>
+			</div>
+			<img
+				src="img/ED2F01E4-A196-4484-BE8D-EB0E8A596961.JPG"
+				class="about__img"
+				alt="Another photo of Zubair"
+			/>
+		</section>
 
+		<!--Service section-->
+		<section class="my-services" id="service">
+			<h2 class="section__title section__title--Services">Services</h2>
+			<div class="services">
 				<div class="card">
 					<i class="fas fa-bars"></i>
 					<h3>Web Development</h3>
@@ -112,41 +134,59 @@
 
 		<!--Skills section-->
 		<section class="skills" id="skills">
-					<h2 class="section__title section__title--Skills">My <span>Stack</span></h2>
-					<p>
-                        I am a front-end web developer. My tech stack consists of:
-                        <ul>
-                            <li>Javascript</li>
-                            <li>Node.js</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>git</li>
-                            <li>SQL</li>
-                            <li>I also do UIPath design and architecture</li>
-                        </ul>
-					</p>
-					<a href="#contact-me" class = "btn" type="button">Get in touch</a>	
+			<h2 class="section__title section__title--Skills">
+				My <span>Stack</span>
+			</h2>
+			<p>I am a front-end web developer. My tech stack consists of:</p>
+			<ul>
+				<li>Javascript</li>
+				<li>Node.js</li>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>git</li>
+				<li>SQL</li>
+				<li>I also do UIPath design and architecture</li>
+			</ul>
+
+			<a href="#contact-me" class="btn">Get in touch</a>
 		</section>
 
-		<!------Contact Me section------>
+		<!--Contact Me section-->
 		<section class="contact-me" id="contact-me">
-			<h3 class = "section__title section__title--Contact">Get In Touch</h3>
+			<h3 class="section__title section__title--Contact">Get In Touch</h3>
 			<i class="fas fa-phone"></i>
-			<a class = "btn">+27 79 5011 069 </a>
-			<i class="far fa-envelope" ></i>
-			<a href="mailto:zubairajam@gmail.com" class = "btn">zubairajam@gmail.com</a>
+			<a class="btn">+27 79 5011 069 </a>
+			<i class="far fa-envelope"></i>
+			<a href="mailto:zubairajam@gmail.com" class="btn">zubairajam@gmail.com</a>
 		</section>
 
-		<!------footer--------->
+		<!--footer-->
 		<section class="footer">
-			<p>Website Designed by <strong><span>Zubair Ajam</span></strong></p>
+			<h3>
+				Website Designed by <strong><span>Zubair Ajam</span></strong>
+			</h3>
 			<p>Find me on Social Media</p>
 			<div class="social">
-				<a href="https://www.facebook.com/zubair.ajam" target= "_blank"
-					class = "btn"><i class="fab fa-facebook-f"></i
+				<a href="https://github.com/ZubairAjam" target="_blank" class="btn"
+					><i class="fab fa-github"></i
 				></a>
-				<a href="https://www.instagram.com/zubair_ajam/" target= "_blank"
-					class= "btn"><i class="fab fa-instagram"></i
+				<a
+					href="https://www.linkedin.com/in/zubair-ajam-322190228/"
+					target="_blank"
+					class="btn"
+					><i class="fab fa-linkedin"></i
+				></a>
+				<a
+					href="https://www.facebook.com/zubair.ajam"
+					target="_blank"
+					class="btn"
+					><i class="fab fa-facebook-f"></i
+				></a>
+				<a
+					href="https://www.instagram.com/zubair_ajam/"
+					target="_blank"
+					class="btn"
+					><i class="fab fa-instagram"></i
 				></a>
 			</div>
 		</section>
