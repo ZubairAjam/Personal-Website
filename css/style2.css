@@ -364,7 +364,9 @@ nav {
 	text-align: center;
 }
 .skills ul li {
-	text-align: center;
+	list-style-type: none;
+	text-justify: left;
+	font-weight: var(--fw-bold);
 }
 @media (min-width: 800px) {
 	.skills {
